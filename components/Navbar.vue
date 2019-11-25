@@ -9,7 +9,7 @@
             <template slot="button-content">
               <em>{{ (authenticatedUser) ? authenticatedUser.email : 'Guest' }}</em>
             </template>
-            <b-dropdown-item v-if="!authenticatedUser" href="/login">Login</b-dropdown-item>
+            <b-dropdown-item v-if="!authenticatedUser" href="/">Login</b-dropdown-item>
             <b-dropdown-item v-if="authenticatedUser" @click="logout">Logout</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
@@ -29,7 +29,7 @@ export default {
     methods: {
         logout: function() {
             firebase.auth().signOut().then(() => {
-                this.$router.replace('login')
+                this.$router.replace('/')
             })
         }
     }
