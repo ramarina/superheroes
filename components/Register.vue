@@ -12,32 +12,32 @@
 </template>
 
 <script>
-    import firebase from 'firebase';
+import firebase from 'firebase';
 
-    export default {
-        name: "Register",
-        data() {
-            return {
-                email: '',
-                password: '',
-                error: null,
-                showDismissibleAlert: false
-            }
-        },
-        methods: {
-            signUp: function() {
-                firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
-                    (user) => {
-                        this.$emit('loging')
-                    },
-                    (err) => {
-                        this.showDismissibleAlert = true
-                        this.error = err.message
-                    }
-                );
-            }
+export default {
+    name: "Register",
+    data() {
+        return {
+            email: '',
+            password: '',
+            error: null,
+            showDismissibleAlert: false
+        }
+    },
+    methods: {
+        signUp: function() {
+            firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
+                (user) => {
+                    this.$emit('loging')
+                },
+                (err) => {
+                    this.showDismissibleAlert = true
+                    this.error = err.message
+                }
+            );
         }
     }
+}
 </script>
 
 <style scoped>
