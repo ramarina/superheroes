@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar :authenticatedUser="authenticatedUser"/>
+    <navbar :authenticatedUser="authenticatedUser" @loging="register = false"/>
     <br>
     <superheroes v-if="authenticatedUser"/>
     <login v-if="!authenticatedUser && !register" @registering="register = true"/>

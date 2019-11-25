@@ -6,7 +6,7 @@
       <b-form-input type="password" v-model="password" placeholder="Password"></b-form-input><br>
       <b-button @click="signUp">Sign Up</b-button>
       <b-alert dismissible variant="danger" v-model="showDismissibleAlert">{{ error }}</b-alert>
-      <p>or go back to <a href="#" @click="$emit('loging')">create one</a>.</p>
+      <p>or go back to <a href="#" @click="$emit('loging')">login</a></p>
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@
             signUp: function() {
                 firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
                     (user) => {
-                        this.$router.replace('/')
+                        this.$emit('loging')
                     },
                     (err) => {
                         this.showDismissibleAlert = true
