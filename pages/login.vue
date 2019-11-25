@@ -31,7 +31,6 @@ export default {
             authenticatedUser: null
         }
     },
-
     methods: {
         login() {
             firebase.auth().signInWithEmailAndPassword(this.email, this.password).then((user) => {
@@ -46,6 +45,7 @@ export default {
             firebase.auth().signInWithPopup(provider).then((result) => {
                 this.$router.replace('home')
             }).catch((err) => {
+                this.showDismissibleAlert = true
                 this.error = err.message
             })
         },

@@ -23,12 +23,5 @@ export default {
     created() {
         firebase.auth().onAuthStateChanged(user => (this.authenticatedUser = user))
     },
-    // created() {
-    //     if(firebase.auth().currentUser){
-    //         this.currentUser = firebase.auth().currentUser
-    //         this.currentUserEmail = firebase.auth().currentUser.email
-    //         this.loggedIn = true
-    //     }
-    // }
 }
 </script>

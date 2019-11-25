@@ -1,6 +1,5 @@
 const env = require('dotenv').config()
 export default {
-  // srcDir: resolve('./src'),
   mode: 'spa',
   env: env.parsed,
   /*

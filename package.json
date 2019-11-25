@@ -2,7 +2,7 @@
   "name": "superheroes",
   "version": "1.0.0",
   "description": "Superheroes API integration",
-  "author": "Marina Radulaski",
+  "author": "MarinaR",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -19,7 +19,6 @@
     "jquery": "^3.4.1",
     "nuxt": "^2.0.0",
     "vue": "^2.6.10",
-    "vue-bootstrap-slider": "^2.1.8",
     "vue-slider-component": "^3.0.43"
   }
 }
