@@ -16,7 +16,7 @@
     "bootstrap-vue": "^2.1.0",
     "dotenv": "^8.2.0",
     "firebase": "^7.5.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "nuxt": "^2.0.0",
     "vue": "^2.6.10",
     "vue-slider-component": "^3.0.43"
